@@ -27,8 +27,6 @@ export async function middleware(request: NextRequest) {
   return response;
 }
 
-// `/r/*` is intentionally absent: QR scans are anonymous and must never be gated or slowed
-// by session handling.
 export const config = {
   matcher: ['/dashboard/:path*', '/login', '/signup'],
 };
